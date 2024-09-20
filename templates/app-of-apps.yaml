@@ -13,7 +13,7 @@ spec:
       selfHeal: true
   source:
     path: hello-world/helm-guestbook
-    repoURL: https://github.ibm.com/essentials-core/ArgoCD-POC-Child-App1.git
+    repoURL: https://github.com/vvmanchala/ArgoCD-POC-Child-App1.git
     targetRevision: main
     helm:
       valueFiles:
