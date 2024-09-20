@@ -12,7 +12,7 @@ spec:
     automated:
       selfHeal: true
   source:
-    path: hello-world/helm-guestbook
+    path: hello-world
     repoURL: https://github.com/vvmanchala/ArgoCD-POC-Child-App1.git
     targetRevision: main
     helm:
