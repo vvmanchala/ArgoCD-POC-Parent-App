@@ -2,19 +2,19 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: child-app
-  namespace: argocd
+  namespace: {{ .Values.namespace }}
 spec:
   destination:
-    namespace: argocd
-    server: https://kubernetes.default.svc
-  project: default
+    namespace: {{ .Values.namespace }}
+    server: {{ .Values.destination.server }}
+  project: {{ .Values.project }}
   syncPolicy:
     automated:
       selfHeal: true
   source:
-    path: my-app
+    path: {{ .Values.path }}
     repoURL: https://github.ibm.com/essentials-core/ArgoCD-POC-Child-App1.git
-    targetRevision: main
+    targetRevision: {{ .Values.revision }}
     helm:
       valueFiles:
-      - values.yaml
+      - {{ .Values.valueFile }}
