@@ -9,10 +9,8 @@ spec:
     server: {{ .Values.destination.server }}
   project: {{ .Values.project }}
   syncPolicy:
-    {{- if eq .Values.autoSync "enabled" }}
     automated:
       selfHeal: true
-    {{- end }}
   source:
     path: {{ .Values.path }}
     repoURL: https://github.ibm.com/essentials-core/ArgoCD-POC-Child-App1.git
