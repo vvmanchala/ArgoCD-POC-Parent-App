@@ -18,4 +18,3 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-{{- end }}
