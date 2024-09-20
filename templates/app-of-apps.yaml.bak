@@ -12,7 +12,7 @@ spec:
     automated:
       selfHeal: true
   source:
-    path: hello-world
+    path: my-app
     repoURL: https://github.ibm.com/essentials-core/ArgoCD-POC-Child-App1.git
     targetRevision: main
     helm:
