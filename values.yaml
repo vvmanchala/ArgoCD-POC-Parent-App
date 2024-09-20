@@ -5,4 +5,4 @@ destination:
   server: https://kubernetes.default.svc
 valueFile: values.yaml
 path: apps
-revision: HEAD
+revision: main 

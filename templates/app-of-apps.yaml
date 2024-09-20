@@ -5,19 +5,17 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: {{ .Values.namespace }}
-    server: {{ .Values.destination.server }}
-  project: {{ .Values.project }}
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
   syncPolicy:
-    {{- if eq .Values.autoSync "enabled" }}
     automated:
       selfHeal: true
-    {{- end }}
   source:
-    path: {{ .Values.path }}
+    path: my-app
     repoURL: https://github.ibm.com/essentials-core/ArgoCD-POC-Child-App1.git
-    targetRevision: {{ .Values.revision }}
+    targetRevision: main
     helm:
       valueFiles:
-      - {{ .Values.valueFile }}
+      - values.yaml
 {{- end }}
