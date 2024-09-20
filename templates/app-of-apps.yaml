@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: parent-app
+  namespace: argocd
+spec:
+  destination:
+    namespace: {{ .Values.namespace }}
+    server: {{ .Values.destination.server }}
+  project: {{ .Values.project }}
+  syncPolicy:
+    {{- if eq .Values.autoSync "enabled" }}
+    automated:
+      selfHeal: true
+    {{- end }}
+  source:
+    path: {{ .Values.path }}
+    repoURL: https://github.ibm.com/essentials-core/ArgoCD-POC-Child-App1.git
+    targetRevision: {{ .Values.revision }}
+    helm:
+      valueFiles:
+      - {{ .Values.valueFile }}
+{{- end }}
