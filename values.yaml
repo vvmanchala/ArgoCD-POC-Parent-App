@@ -1,6 +1,6 @@
 namespace: argocd
 project: default
-autoSync: disabled
+autoSync: enabled
 destination:
   server: https://kubernetes.default.svc
 valueFile: values.yaml

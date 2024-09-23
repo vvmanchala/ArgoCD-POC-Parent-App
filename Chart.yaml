@@ -1,0 +1,14 @@
+apiVersion: v2
+description: Helm chart for POC 
+name: Parent-App
+version: "1.0"
+keywords:
+  - POC
+type: application
+appVersion: 1.0.0
+home: https://github.com/vvmanchala
+sources:
+  - https://github.com/vvmanchala
+maintainers:
+  - name: DevOps and SRE Team
+
