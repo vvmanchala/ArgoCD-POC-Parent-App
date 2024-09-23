@@ -2,16 +2,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: child-app1
-  namespace: {{ .Values.namespace }}
+  namespace: argocd
 spec:
   destination:
-    namespace: {{ .Values.namespace }}
+    namespace: argocd
     server: https://kubernetes.default.svc
   project: default
   syncPolicy:
     automated:
       selfHeal: true
-      prune: true
   source:
     path: hello-world
     repoURL: https://github.com/vvmanchala/ArgoCD-POC-Child-App1.git
