@@ -2,10 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: child-app1
-  namespace: argocd
+  namespace: {{ .Values.namespace }}
 spec:
   destination:
-    namespace: argocd
+    namespace: {{ .Values.namespace }}
     server: https://kubernetes.default.svc
   project: default
   syncPolicy:
