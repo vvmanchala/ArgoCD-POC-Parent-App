@@ -12,7 +12,7 @@ spec:
     automated:
       selfHeal: true
   source:
-    path: hello-world
+    path: Chail-app2
     repoURL: https://github.com/vvmanchala/ArgoCD-POC-Child-App2.git
     targetRevision: main
     helm:
