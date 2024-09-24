@@ -11,7 +11,7 @@ spec:
   syncPolicy:
     automated:
       selfHeal: true
-      prune: true
+      prune: false
   source:
     path: hello-world
     repoURL: https://github.com/vvmanchala/ArgoCD-POC-Child-App1.git
