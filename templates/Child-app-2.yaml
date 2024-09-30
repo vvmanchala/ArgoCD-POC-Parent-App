@@ -12,7 +12,7 @@ spec:
     automated:
       selfHeal: true
   source:
-    path: Chail-app2/alpine
+    path: alpine
     repoURL: https://github.com/vvmanchala/ArgoCD-POC-Child-App2.git
     targetRevision: main
     helm:
